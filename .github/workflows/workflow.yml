@@ -1,0 +1,12 @@
+name: CI workflow
+
+on:
+  push: # event to trigger the workflow
+    branches: [main]
+  pull_request: # trigger when a pull request is executed
+    branches: [main]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
